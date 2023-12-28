@@ -7,7 +7,7 @@ let webhook = async (req, res) => {
 
     console.log(req.body)
     
-    res.status(200)
+    res.status(200).json({ss:"S"})
     // let data = req.body
     // const secretHash = process.env.FLW_SECRET_HASH;
     // const signature = req.headers["verif-hash"];

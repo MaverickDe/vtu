@@ -25,10 +25,14 @@ const webhook = require("./webhook.js");
 // app.use("/user", things);
 // app.use("/user/wallet", wallet);
 // app.use("/user/bill", bill);
-// app.use("/webhooksig", webhook);
+app.use("/", (req, res, next) => {
+  console.log(req,req.body)
+  next()
+});
 
 
 app.post("/webhook",webhook)
+// app.POST("/webhook",webhook)
 
 
   //If Everything goes correct, Then start Express Server
